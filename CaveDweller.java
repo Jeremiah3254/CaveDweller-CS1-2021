@@ -3,11 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
+
+
 package cavedweller;
+
+import java.util.Scanner;
 
 /**
  *
- * @author jword
+ * @author 800215
  */
 public class CaveDweller {
 
@@ -16,9 +21,19 @@ public class CaveDweller {
      */
     public static void main(String[] args) {
         Cave cave = new Cave();
-        cave.caveman.speak();
+       // cave.caveman.speak();
         System.out.println(cave.toString());
-        System.out.println(cave.caveman.toString());
+       //System.out.println(cave.caveman.toString());
+      // System.out.println(cave.Food1.toString());
+      // System.out.println(cave.Food2.toString());
+      
+       Scanner kboard = new Scanner(System.in);
+       
+       String input = "";
+       while (!input.equals("close")) {
+           input = kboard.nextLine();
+           cave.handleInput(input);
+       }
     }
     
 }
