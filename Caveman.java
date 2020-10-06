@@ -32,6 +32,21 @@ public class Caveman {
        return "x: "+x+", y: "+y;
     }
     
+     public void openDoor() {
+         if (hasKey == true) {
+        System.out.println("You have escaped the cave, Congreats!");
+        System.exit(0);   
+         }
+         else {
+        System.out.println("A locked door was found, cant be opend");
+         }
+    }
+    
+     public void pickdUpKey() {
+        hasKey = true;
+        System.out.println("You have found a key!");
+    }
+    
     public void moveUp() {
         //y tracks how far down (largr y farther down, smaller y higher up)
         y -= 1;
@@ -49,10 +64,17 @@ public class Caveman {
         x -= 1;
     }
     
+    
     public void eat(Food food) {
-        hp += food.getHPChange();
+        this.hp += food.getHPChange();
+        //food.Eaten(true);
+        System.out.println("Me eat "+food.getName());
     }
     //Accessor - getters & setters (information between objects)
+
+    public void setHasKey(boolean hasKey) {
+        this.hasKey = hasKey;
+    }
     
     public void setHP(int hp) {
         if (hp <= 100 && hp >= 0) {

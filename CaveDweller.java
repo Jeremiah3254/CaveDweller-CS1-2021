@@ -25,9 +25,12 @@ public class CaveDweller {
         System.out.println(cave.toString());
        //System.out.println(cave.caveman.toString());
       // System.out.println(cave.Food1.toString());
-      // System.out.println(cave.Food2.toString());
+     //  System.out.println(cave.Food2.toString());
+     //System.out.println(cave.bat.toString());
+     
       
        Scanner kboard = new Scanner(System.in);
+         
        
        String input = "";
        while (!input.equals("close")) {

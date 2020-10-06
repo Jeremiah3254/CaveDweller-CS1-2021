@@ -12,16 +12,16 @@ package cavedweller;
 public class Food {
     private int x, y, hpChange;
     private String name;
-    private boolean eaten;
+    private boolean Eaten;
     //fields
     
     //constructor
-     public Food(String name, int x, int y) {
+     public Food(String name, int x, int y, int hpChange, boolean Eaten) {
         this.name = name;
         this.x = x;
         this.y = y;
-        this.eaten = false;
-        this.hpChange = 10;
+        this.Eaten = false;
+        this.hpChange = hpChange;
     }
     
     //methods
@@ -51,8 +51,8 @@ public class Food {
         return name;
     }
 
-    public boolean isEaten() {
-        return eaten;
+    public boolean setEaten() {
+        return Eaten;
     }
     
 }
